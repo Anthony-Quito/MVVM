@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVM.Views.Operations">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Label Text="Lab 11 - MVVM - QUITO"
+                   FontSize="30"
+                   TextColor="Green"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                   Margin="10"/>
+            
+            <StackLayout Orientation="Horizontal" Margin="60">
+                <Label Text="Valor 1" FontSize="20"/>
+                <Editor Text="{Binding Valor1}"></Editor>
+                <Label Text="Valor 2" FontSize="20"/>
+                <Editor Text="{Binding Valor2}"></Editor>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Margin="25">
+                <Button Text="Sumar" Command="{Binding Sumar}" BackgroundColor="CadetBlue"/>
+                <Label Text="{Binding ResultSuma}" FontSize="25" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Margin="25">
+                <Button Text="Restar" Command="{Binding Restar}" BackgroundColor="DarkOrange"/>
+                <Label Text="{Binding ResultResta}" FontSize="25"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Margin="25">
+                <Button Text="Multiplicar" Command="{Binding Multiplicar}" BackgroundColor="Gold"/>
+                <Label Text="{Binding ResultMulti}" FontSize="25" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Margin="25">
+                <Button Text="Dividir" Command="{Binding Dividir}" BackgroundColor="Fuschia"/>
+                <Label Text="{Binding ResultDiv}" FontSize="25" />
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
